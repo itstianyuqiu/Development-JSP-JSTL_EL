@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <servlet>
+        <servlet-name>example01</servlet-name>
+        <servlet-class>ictgradschool.web.simplewebapp.example01.SimpleServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>example01</servlet-name>
+        <url-pattern>/example01</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>example03</servlet-name>
+        <servlet-class>ictgradschool.web.simplewebapp.example03.WebMVCServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>example03</servlet-name>
+        <url-pattern>/example03</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>example04</servlet-name>
+        <servlet-class>ictgradschool.web.simplewebapp.example04.ComplexExampleServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>example04</servlet-name>
+        <url-pattern>/example04</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>exercise01</servlet-name>
+        <servlet-class>ictgradschool.web.simplewebapp.exercise01.Biography</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>exercise01</servlet-name>
+        <url-pattern>/Exercise01</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>exercise02</servlet-name>
+        <servlet-class>ictgradschool.web.simplewebapp.exercise02.Biography</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>exercise02</servlet-name>
+        <url-pattern>/Exercise02</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- An advanced config option which lets us specify "preludes" and "codas" for a bunch of JSP files.
+     These are included at the beginning and end of the given JSP files, respectively. In this instance, we're using
+     them as a way to include all the scripts / css / html / head / body stuff in multiple files at once. -->
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>/WEB-INF/example04/article-detail.jsp</url-pattern>
+            <url-pattern>/WEB-INF/example04/articles.jsp</url-pattern>
+            <include-prelude>/WEB-INF/example04/jspf/header.jspf</include-prelude>
+            <include-coda>/WEB-INF/example04/jspf/footer.jspf</include-coda>
+        </jsp-property-group>
+    </jsp-config>
+
+</web-app>

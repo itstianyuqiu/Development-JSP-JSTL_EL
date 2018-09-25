@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="web_lab_17_examples:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/web_lab_17_examples_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="web_lab_jsp_jstl/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="web_lab_jsp_jstl" />
+          <element id="dir-copy" path="$PROJECT_DIR$/conf/dev" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="lib" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
